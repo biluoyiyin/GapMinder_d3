@@ -225,7 +225,11 @@ function generateVis(){
         quick_sort(mylist, low, left-1)
         quick_sort(mylist, left+1, high)
     }
+function oneYear(){
+    
+}
 // Load the file data.csv and generate a visualisation based on it
+function animate (){
 	d3.csv("./data/GCI_CompleteData4.csv", function(error, data){
 		
 		// handle any data loading errors
@@ -305,6 +309,9 @@ function generateVis(){
             }, 1500);
 		}
 	});
+}
+
+window.onload = animate();
         
 
 		</script>
@@ -312,5 +319,6 @@ function generateVis(){
 
 		<script      type="text/javascript">d3.select("#full_code_list").text(d3.select("#demo_code").text())
         </script>
+        <script src="./jquery-3.3.1.min.js"></script>  
 </body>	 
 </html>
